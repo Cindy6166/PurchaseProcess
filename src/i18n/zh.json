@@ -1,0 +1,22 @@
+{
+  "account": "帳戶",
+  "search": "搜尋",
+  "add": "新增",
+  "name": "姓名",
+  "email": "信箱",
+  "edit":"編輯",
+  "saved":"保存",
+  "delete":"刪除",
+  "open":"展開",
+  "close":"關閉",
+  "setting":"設定",
+  "reset":"重置",
+  "cancel":"取消",
+  "confirm":"確認",
+  "login out":"登出",
+  "user": "使用者",
+  "account name": "帳戶名",
+  "password":"密碼",
+  "confirmed password":"確認密碼",
+  "submit":"提交"
+}

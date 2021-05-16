@@ -1,0 +1,22 @@
+{
+  "account": "Account",
+  "search": "Search",
+  "add": "Add",
+  "name": "Name",
+  "email": "Email",
+  "edit":"Edit",
+  "saved":"Saved",
+  "delete":"delete",
+  "open":"Open",
+  "close":"Close",
+  "setting":"Setting",
+  "reset":"Reset",
+  "cancel":"Cancel",
+  "confirm":"Confirm",
+  "login out":"Login Out",
+  "user":"User",
+  "account name": "Account Name",
+  "password":"Password",
+  "confirmed password":"Confirmed Password",
+  "submit":"Submit"
+}
