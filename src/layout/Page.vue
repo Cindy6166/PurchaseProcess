@@ -1,40 +1,47 @@
 <template>
   <div class="page">
-    <div class="top-bar">
-      <Lang />
-      <div class="userCenter">
-        <el-popover
-          placement="bottom"
-          :title="$t('user')"
-          width="300"
-          trigger="click"
+    <div class="navbar">
+      <div class="item">
+        <el-select
+          v-model="$store.state.lang"
+          placeholder="请选择"
+          @change="setLang"
         >
-          <br />
-          <h3>{{ $t("name") }}:</h3>
-          <br />
-          <router-link to="/">{{ $t("login out") }}</router-link>
-          <el-button slot="reference" circle
-            ><i class="el-icon-user-solid"></i
-          ></el-button>
-        </el-popover>
+          <el-option
+            v-for="(item, index) in optionsLang"
+            :key="index"
+            :label="item.text"
+            :value="item.value"
+          >
+          </el-option>
+        </el-select>
       </div>
-      <slot name="top-bar"></slot>
+      <div class="item">
+        <i class="el-icon-user"> SIGH IN </i>
+      </div>
+      <div class="item">
+        <i class="el-icon-document"> HELP </i>
+      </div>
+      <slot name="navbar"></slot>
     </div>
     <div class="container">
       <div class="content">
-        <slot name="content"></slot>
+        <div class="step">
+          <slot name="step"></slot>
+        </div>
+        <div class="main">
+          <slot name="main"></slot>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-import Lang from "@/components/Lang";
+// import Lang from "@/components/Lang";
 
 export default {
   name: "Page",
-  components: {
-    Lang,
-  },
+  components: {},
   data() {
     return {
       optionsLang: [
@@ -45,36 +52,48 @@ export default {
     };
   },
   computed: {},
-  methods: {},
+  methods: {
+    // 儲存切換的語系
+    setLang(value) {
+      console.log(value);
+      this.$store.commit("setLang", value);
+      this.$i18n.locale = value;
+      localStorage.setItem("footmark-lang", value);
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
-.top-bar {
+.navbar {
   width: 100%;
-  height: 20vh;
-  padding: 15px;
+  height: 70px;
+  padding: 0 50px 0 0;
   display: flex;
   flex-direction: row-reverse;
-  // background-color: burlywood;
+  .item {
+    line-height: 70px;
+    margin: 0 50px 0 0;
+    .el-icon-user {
+      color: black;
+      font-size: 16px;
+    }
+  }
 }
 .container {
-  display: flex;
-}
-.content {
   width: 100vw;
   height: 100vh;
-  padding: 5% 0;
-  // background-color: cornflowerblue;
-}
-.lang {
-  text-align: right;
-}
-.userCenter {
-  text-align: right;
-  padding: 0 20px 0 0;
-  .el-icon-user-solid {
-    color: cornflowerblue;
-    font-size: 20px;
+  background-color: rgb(224, 221, 221);
+  .content {
+    margin: auto;
+    width: 80vw;
+    height: 50vh;
+    .main {
+      height: 50vh;
+      text-align: center;
+      background-color: white;
+      filter: drop-shadow(10px 10px 4px rgba(197, 195, 195, 0.7));
+      padding: 10% 20%;
+    }
   }
 }
 </style>
