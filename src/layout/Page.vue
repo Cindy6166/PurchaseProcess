@@ -67,12 +67,12 @@ export default {
 .navbar {
   width: 100%;
   height: 70px;
-  padding: 0 50px 0 0;
+  padding: 0 5% 0 0;
   display: flex;
   flex-direction: row-reverse;
   .item {
     line-height: 70px;
-    margin: 0 50px 0 0;
+    margin: 0 5% 0 0;
     .el-icon-user {
       color: black;
       font-size: 16px;
@@ -86,13 +86,14 @@ export default {
   .content {
     margin: auto;
     width: 80vw;
-    height: 50vh;
+    // .step {
+    //   margin: auto;
+    // }
     .main {
-      height: 50vh;
       text-align: center;
       background-color: white;
       filter: drop-shadow(10px 10px 4px rgba(197, 195, 195, 0.7));
-      padding: 10% 20%;
+      padding-bottom: 50px;
     }
   }
 }

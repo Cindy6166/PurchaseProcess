@@ -7,10 +7,13 @@ import "element-ui/lib/theme-chalk/index.css";
 import VueI18n from "vue-i18n"; // 引入 Vue I18n
 import zh from "./i18n/zh"; // 存放中文語系檔
 import en from "./i18n/en"; // 存放英文語系檔
+import axios from "axios";
+import VueAxios from "vue-axios";
 
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 Vue.use(VueI18n);
+Vue.use(VueAxios, axios);
 
 // 預設使用的語系
 let locale = "en";
