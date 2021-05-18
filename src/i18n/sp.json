@@ -1,0 +1,18 @@
+{
+  "sign in": "iniciar sesión",
+  "help": "AYUDA",
+  "my data": "Mis Datos",
+  "pay": "Pago",
+  "review the data and complete those pending before continuing with the process": "Revisa los datos y completa aquellos pendientes antes de continuar con el proceso",
+  "name": "Nombre",
+  "surnames": "Apellidos",
+  "continue": "Continuar",
+  "product payment": "Pago del producto",
+  "once the payment of the product has been made, an email has been received with the details of the purchase": "Una vez efectuado el pago del producto, recibido un email con los detalles de la compró",
+  "credit card": "Tarjeta de crédito",
+  "it was redirected to a payment platform, it is a secure process. payment validation may take 24 hours to complete.": "Se redirigirá a una plataforma de pago, Se trata de un proceso seguro. Puede que la validación del pago tarda 24 horas en completarse.",
+  "previous": "Anterior",
+  "to pay": "Pagar",
+  "Enhorabuena": "Enhorabuena",
+  "Se ha finalizado ya el proceso de compra con éxito. Recibirá un email con todos los detalles. Gracias": "Se ha finalizado ya el proceso de compra con éxito. Recibirá un email con todos los detalles. Gracias."
+}

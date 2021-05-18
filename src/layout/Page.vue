@@ -2,11 +2,7 @@
   <div class="page">
     <div class="navbar">
       <div class="item">
-        <el-select
-          v-model="$store.state.lang"
-          placeholder="请选择"
-          @change="setLang"
-        >
+        <el-select v-model="$store.state.lang" @change="setLang" size="mini">
           <el-option
             v-for="(item, index) in optionsLang"
             :key="index"
@@ -17,12 +13,11 @@
         </el-select>
       </div>
       <div class="item">
-        <i class="el-icon-user"> SIGH IN </i>
+        <i class="el-icon-user"> {{ $t("sign in") }}</i>
       </div>
       <div class="item">
-        <i class="el-icon-document"> HELP </i>
+        <i class="el-icon-document"> {{ $t("help") }} </i>
       </div>
-      <slot name="navbar"></slot>
     </div>
     <div class="container">
       <div class="content">
@@ -37,15 +32,13 @@
   </div>
 </template>
 <script>
-// import Lang from "@/components/Lang";
-
 export default {
   name: "Page",
   components: {},
   data() {
     return {
       optionsLang: [
-        { text: "中文", value: "zh" },
+        { text: "Español", value: "sp" },
         { text: "English", value: "en" },
       ],
       isClick: "",
@@ -53,7 +46,7 @@ export default {
   },
   computed: {},
   methods: {
-    // 儲存切換的語系
+    // store the language
     setLang(value) {
       console.log(value);
       this.$store.commit("setLang", value);
@@ -75,7 +68,6 @@ export default {
     margin: 0 5% 0 0;
     .el-icon-user {
       color: black;
-      font-size: 16px;
     }
   }
 }
@@ -86,14 +78,11 @@ export default {
   .content {
     margin: auto;
     width: 80vw;
-    // .step {
-    //   margin: auto;
-    // }
     .main {
       text-align: center;
       background-color: white;
       filter: drop-shadow(10px 10px 4px rgba(197, 195, 195, 0.7));
-      padding-bottom: 50px;
+      padding-bottom: 2%;
     }
   }
 }

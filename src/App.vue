@@ -13,6 +13,27 @@
   margin: 0;
   box-sizing: border-box;
 }
+h1 {
+  @media (max-width: 576px) {
+    font-size: 20px;
+  }
+}
+h3 {
+  @media (max-width: 576px) {
+    font-size: 16px;
+  }
+}
+h3 {
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
+}
+i {
+  @media (max-width: 576px) {
+    font-size: 12px;
+  }
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
