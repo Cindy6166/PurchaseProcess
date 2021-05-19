@@ -95,16 +95,16 @@ export default {
       },
     };
   },
-  mounted() {
-    this.getSuccessData();
-  },
+  // mounted() {
+  //   this.getSuccessData();
+  // },
   methods: {
     async getSuccessData() {
       await axios
         .get("http://www.mocky.io/v2/5e3d41272d00003f7ed95c09")
         .then((response) => {
           this.stepThree.data = response.data;
-          console.log(this.data);
+          console.log(this.stepThree.data);
         })
         .catch((error) => {
           console.log(error);
@@ -121,6 +121,7 @@ export default {
           this.stepOne.show = false;
           this.stepTwo.show = true;
         } else if (this.active === 2) {
+          this.getSuccessData();
           this.stepTwo.show = false;
           this.stepThree.show = true;
         }
